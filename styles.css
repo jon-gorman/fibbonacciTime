@@ -1,0 +1,59 @@
+
+body{
+    width: 99%;
+    height: 99%;
+    text-align: center;
+    background-color: black;
+}
+iframe{
+    width: 99%;
+    height: 99%;
+}
+.wrapper1{
+    display: inline-block;
+}
+.container{
+    border: solid 1px black;
+    height: 95vh;
+    width: 99vw;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+            "five five five five five three three three"
+            "five five five five five three three three"
+            "five five five five five three three three"
+            "five five five five five one-a two two"
+            "five five five five five one-b two two"
+}
+.item-5{
+    border-radius: 10px;
+    grid-area: five;
+    background-color: grey;
+    border: solid 1px black;
+}
+.item-3{
+    border-radius: 10px;
+    grid-area: three;
+    background-color: grey;
+    border: solid 1px black;
+}
+.item-2{
+    border-radius: 10px;
+    grid-area: two;
+    background-color: grey;
+    border: solid 1px black;
+}
+.item-1a{
+    border-radius: 10px;
+    grid-area: one-a;
+    background-color: grey;
+    border: solid 1px black;
+}
+.item-1b{
+    border-radius: 10px;
+    grid-area: one-b;
+    background-color: grey;
+    border: solid 1px black;
+}
+
