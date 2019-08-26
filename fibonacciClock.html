@@ -24,95 +24,97 @@
 <script type="text/javascript" src="timeTesting.js">
 </script>
 <script >
-  setInterval(getHourArray,1000)
-  setInterval(getMinuteArray, 1000)
+  setInterval(getHourArray,5000)
+  setInterval(getMinuteArray, 5000)
   </script>
 <script>
 
   //Time logic
   //Five square
-  function updater() {
-    let findFivesH = firstHourArray.includes(5);
-    let findFivesM = firstMinuteArray.includes(5);
+  function update() {
+    let findFivesH = firstHourArray.includes(5,0);
+    let findFivesM = firstMinuteArray.includes(5,0 );
     if ((findFivesH === true) && (findFivesM === true)) {
-      $('.item-5').css('background-color', 'blue')
+      $('.item-5').css('background-color', 'blue ')
     }
-    if ((findFivesH === true) && (findFivesM === false)) {
-      $('.item-5').css('background-image', 'red')
+    else if ((findFivesH === true) && (findFivesM === false)) {
+      $('.item-5').css('background-image', 'red !important')
+
     }
-    if ((findFivesH === false) && (findFivesM === true)) {
+    else if ((findFivesH === false) && (findFivesM === true)) {
       $('.item-5').css('background-color', 'green')
     }
-    if ((findFivesH === false) && (findFivesM === false)) {
+    else if ((findFivesH === false) && (findFivesM === false)) {
       $('.item-5').css('background-color', 'white')
     }
     //Three square
-    let findThreesH = firstHourArray.includes(3);
-    let findThreesM = firstMinuteArray.includes(3);
+    let findThreesH = firstHourArray.includes(3, 1);
+    let findThreesM = firstMinuteArray.includes(3, 1);
     if ((findThreesH === true) && (findThreesM === true)) {
       $('.item-3').css('background-color', 'blue')
     }
-    if ((findThreesH === true) && (findThreesM === false)) {
+    else if ((findThreesH === true) && (findThreesM === false)) {
       $('.item-3').css('background-color', 'red')
     }
-    if ((findThreesH === false) && (findThreesM === true)) {
+    else if ((findThreesH === false) && (findThreesM === true)) {
       $('.item-3').css('background-color', 'green')
     }
-    if ((findThreesH === false) && (findThreesM === false)) {
+    else if ((findThreesH === false) && (findThreesM === false)) {
       $('.item-3').css('background-color', 'white')
     }
     //Twos square
-    let findTwosH = firstHourArray.includes(2);
-    let findTwosM = firstMinuteArray.includes(2);
+    let findTwosH = firstHourArray.includes(2, 2);
+    let findTwosM = firstMinuteArray.includes(2, 2);
     if ((findTwosH === true) && (findTwosM === true)) {
       $('.item-2').css('background-color', 'blue')
     }
-    if ((findTwosH === true) && (findTwosM === false)) {
+    else if ((findTwosH === true) && (findTwosM === false)) {
       $('.item-2').css('background-color', 'red')
     }
-    if ((findTwosH === false) && (findTwosM === true)) {
+    else if ((findTwosH === false) && (findTwosM === true)) {
       $('.item-2').css('background-color', 'green')
     }
-    if ((findTwosH === false) && (findTwosM === false)) {
+    else if ((findTwosH === false) && (findTwosM === false)) {
       $('.item-2').css('background-color', 'white')
     }
     //Ones
-    if (firstMinuteArray===[]) {
-      $('.item-1a').css('background-color', 'white')
-      $('.item-1b').css('background-color', 'white')
+    if (firstMinuteArray === ['', '', '', '', '']) {
+      // $('.item-1a').css('background-color', 'white')
+      // $('.item-1b').css('background-color', 'white')
     }
-    if ((firstHourArray[3] === 1) && (firstMinuteArray[3] === 1)) {
+    else if ((firstHourArray[3] === 1) && (firstMinuteArray[3] === 1)) {
       $('.item-1a').css('background-color', 'blue')
     }
-    if ((firstHourArray[3] === 1) && (firstMinuteArray[3]==='')) {
+    else if ((firstHourArray[3] === 1) && (firstMinuteArray[3] === '')) {
       $('.item-1a').css('background-color', 'red')
     }
-    if ((firstHourArray[3] === '') && (firstMinuteArray[3] === 1)) {
+    else if ((firstHourArray[3] === '') && (firstMinuteArray[3] === 1)) {
       $('.item-1a').css('background-color', 'green')
     }
-    if ((firstHourArray[3] === '') && (firstMinuteArray[3] === '')) {
+    else if ((firstHourArray[3] === '') && (firstMinuteArray[3] === '')) {
       $('.item-1a').css('background-color', 'white')
     }
-    if ((firstHourArray[3] === 1) && (firstHourArray[4] === 1) && (firstMinuteArray[3]==='') && (firstMinuteArray[4]==='')) {
+    else if ((firstHourArray[3] === 1) && (firstHourArray[4] === 1) && (firstMinuteArray[3] === '') && (firstMinuteArray[4] === '')) {
       $('.item-1a').css('background-color', 'red')
       $('.item-1b').css('background-color', 'red')
     }
-    if ((firstHourArray[4]==='') && (firstMinuteArray[4]==='')) {
+     if ((firstHourArray[4] === "") && (firstMinuteArray[4] === "")) {
+      console.log("hey");
       $('.item-1b').css('background-color', 'white')
     }
-    if ((firstHourArray[4] === 1) && (firstMinuteArray[4] === 1)) {
+    else if ((firstHourArray[4] === 1) && (firstMinuteArray[4] === 1)) {
       $('.item-1b').css('background-color', 'blue')
     }
-    if ((firstHourArray[4] === 1) && (firstMinuteArray[4]==='')) {
+    else if ((firstHourArray[4] === 1) && (firstMinuteArray[4] === '')) {
       $('.item-1b').css('background-color', 'red')
     }
-    if ((firstHourArray[4]==='') && (firstMinuteArray[4] === 1)) {
+    else if ((firstHourArray[4] === '') && (firstMinuteArray[4] === 1)) {
       $('.item-1b').css('background-color', 'green')
     }
-    if ((firstHourArray[4]==='') && (firstMinuteArray[4]==='') && (firstHourArray[3]==='') &&  (firstMinuteArray[3]==='')) {
+    else if ((firstHourArray[4] === '') && (firstMinuteArray[4] === '') && (firstHourArray[3] === '') && (firstMinuteArray[3] === '')) {
       $('.item-1b').css('background-color', 'white')
     }
-  }setInterval(updater, 1000)
+  }setInterval(update, 1000)
 </script>
 </body>
 
